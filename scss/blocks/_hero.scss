@@ -1,0 +1,210 @@
+@include size (phone) {
+    
+    .hero{
+        background-image: url("../images/hero-mobile2x.jpg");
+        background-repeat: no-repeat;
+        background-size: 85% 279px
+        ;
+        background-position: calc(50% + 1px) calc(0% - 1px);
+    }
+    
+    .hero__wrap{
+        width: 100%;
+        max-width: 390px;
+        
+    }
+    
+    .hero__title{
+        margin-top: 0;
+        margin-bottom: 32px;
+        padding-top: 300px;
+        @include txt-formats("Ibarra Real Nova",32px, 700, 42px, #000);
+        color: var(--main-title-color);
+    }
+    
+    @media only screen and (min-width: 378px) {
+        .hero__title{
+            font-size: 40px;
+        }
+    }
+    
+    @media only screen and (min-width: 400px) {
+        
+        .hero{
+            background-size: 85% 391px;
+        }
+        .hero__title{
+            padding-top: 405px;
+        }
+    }
+    
+    @media only screen and (min-width: 500px) {
+        
+        .hero{
+            background-size: 88% 431px;
+        }
+        
+        .hero__title{
+            padding-top: 452px;
+        }
+    }
+    
+    @media only screen and (min-width: 600px) {
+        
+        .hero{
+            background-size: 88% 517px;
+        }
+        
+        .hero__title{
+            
+            padding-top: 544px;
+        }
+    }
+    
+    @media only screen and (min-width: 700px) {
+        
+        .hero{
+            background-size: 88% 543px;
+        }
+        
+        .hero__title{
+            
+            padding-top: 563px;
+        }
+    }
+    
+    .hero__link{
+        position: relative;
+        display: inline-block;
+        margin-left: 48px;
+        padding: 17px 43px;
+        @include txt-formats('Public Sans', 12px, 400, 14px,#fff );
+        text-align: center;
+        background-color: var(--main-btn-bgcolor);
+ 
+        &:hover{
+            background-color: #557069e6;
+            &::before{
+                background-color:#557069 ;
+                
+            }
+        }
+    }
+    
+    .hero__link{
+        &::before{
+            position: absolute;
+            top: 0;
+            left: -48px;
+            display: block;
+            width: 48px;
+            height: 49px;
+            padding: 18px 16px;
+            background-color: rgb(0, 0, 0, 0.8);
+            mix-blend-mode: normal;
+            background-image: url("../images/link-decor.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: all .3s ease;
+            content: " ";
+        }
+    }
+    
+}
+
+@include size (tablet) {
+    
+    .hero{
+        position: relative;
+        padding-top: 267px;
+        background-image: url("../images/hero-tablet.jpg");
+        background-size: 92% 100%;
+    }
+    
+    @include bgRetina{
+        .hero{
+            background-image: url("../images/hero-tablet2x.jpg");
+        }
+    }
+    .header{
+        padding: 73px 0 56px 0;
+    }
+    
+    
+    @media only screen and (min-width: 850px) {
+        .hero{
+            padding-top: 367px;
+            background-size: 92% 100%;
+        }
+    }
+    
+    @media only screen and (min-width: 950px) {
+        .hero{
+            padding-top: 400px;
+            background-size: 93% 100%;
+        }
+    }
+    
+    @media only screen and (min-width: 1050px) {
+        .hero{
+            padding-top: 450px;
+            background-size: 94% 100%;
+        }
+    }
+    
+    @media only screen and (min-width: 1150px) {
+        .hero{
+            padding-top: 450px;
+            background-size: 94% 100%;
+        }
+    }
+    
+    .hero__wrap{
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: #fafafa;
+    }
+    
+    .hero__wrap{
+        max-width: 514px;
+    }
+    
+    .hero__title{
+        padding-top: 0;
+        padding: 55px 56px 0 0;
+    }
+}
+
+@include size (desktop) {
+    .hero__wrap{
+        top: 0;
+        max-width:  445px;
+    }
+    
+    .hero__title{
+        margin-bottom: 53px;
+        font-size: 49px;
+        line-height: 50px;
+    }
+    
+    @media only screen and (min-width: 1182px) {
+        .hero{
+            padding-top: 239px;
+            background-image: url("../images/hero-desktop.jpg");
+            background-size: 1110px 600px;
+        }
+        
+        @include bgRetina{
+            .hero{
+                background-image: url("../images/hero-desktop2x.png");
+            }
+        }
+        
+        .hero__wrap{
+            top: 0;
+        }
+        
+    }
+    
+}

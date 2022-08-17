@@ -1,0 +1,54 @@
+@include size (phone) {
+
+    .portfolio__left{
+        margin-bottom: 32px;
+    }
+
+    .portfolio__picture .portfolio__img{
+        display: block;
+        width: 635px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .portfolio__picture-double .portfolio__img{     display: block;
+        width: 57%;
+        margin: 0 auto;
+    }
+
+    .portfolio__right{
+        margin-bottom: 72px;
+        border-top: 1px solid #33323d26;
+        border-bottom: 1px solid #33323d26;
+    }
+    .portfolio__heading{
+        @include txt-formats('Ibarra Real Nova', 40px, 700, 42px, #33323D);
+        letter-spacing: -0.357143px;
+    }
+    
+    .portfolio__desc{
+        @include txt-formats('Public Sans', 15px, 400, 30px, #33323dcc);
+        mix-blend-mode: normal;
+    }
+    
+    .portfolio__link{
+        display: inline-block;
+        margin-bottom: 24px;
+        padding: 17px 43px;
+        @include txt-formats( 'Public Sans', 12px, 400, 14px, #33323D);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border: 1px solid #33323D;
+    }
+
+    .portfolio__title{
+        @include txt-formats('Ibarra Real Nova', 32px, 400, 42px, #33323D);
+        letter-spacing: -0.285714px;
+    }
+
+    .portfolio__descc{
+        @include txt-formats( 'Public Sans', 15px, 400, 30px, #33323dcc);
+    }
+
+}
+

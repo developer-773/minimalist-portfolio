@@ -1,0 +1,152 @@
+@include size (phone) {
+    
+    .contact__box{
+        padding-bottom: 80px;
+    }
+    
+    .contact__first{
+        border-top: 1px solid #33323d26;
+        border-bottom: 1px solid #33323d26;
+    }
+    
+    .contact__title{
+        margin: 24px 0;
+        @include txt-formats( 'Ibarra Real Nova', 40px, 700, 42px, #33323D);
+        letter-spacing: -0.357143px;
+    }
+    
+    .contact__desc-box{
+        max-width: 689px;
+    }
+    
+    .contact__desc{
+        margin-bottom: 24px;
+        @include txt-formats( 'Public Sans', 15px, 400, 30px, #33323D);
+        mix-blend-mode: normal;
+        opacity: 0.8;
+    }
+    
+    .forum{
+        display: flex;
+        margin-bottom: 32px;
+    }
+    
+    .forum__item{
+        &:nth-child(1){
+            margin-right: 15px;
+        }
+    }
+    
+    .forum__item{
+        &:nth-child(2){
+            margin-right: 16px;
+        }
+    }
+    
+    .contact__label{
+        display: block;
+        width: 100%;
+        min-width: 311px;
+        @include txt-formats('Public Sans', 13px, 700, 30px, rgb(51, 50, 61, 0.8));
+        mix-blend-mode: normal;
+    }
+    
+    .input{
+        width: 100%;
+        margin-top: 8px;
+        // margin: 8px 0 24px 0;
+        padding: 9px 16px;
+        @include txt-formats('Public Sans', 13px, 400, 30px, #33323d66);
+        mix-blend-mode: normal;
+        background-color: #33323d26;
+        border: none;
+    }
+    
+    .contact__invalid{
+        @include txt-formats('Public Sans', 10px, 700, 12px, #F43030);
+        font-style: italic;
+        opacity: 0;
+    }
+    
+    .input:not(:placeholder-shown):not(:active){
+        color:  #33323D;
+    }
+    
+    .input:not(:placeholder-shown):not(:focus):invalid ~ .contact__invalid {
+        opacity: 1;
+    }
+    
+    .contact__textarea{
+        resize: none;
+    }
+    
+    .contact__btn{
+        min-width: 200px;
+        padding: 0;
+        padding: 17px 24px;
+        @include txt-formats( 'Public Sans', 12px, 400, 14px, #fff);
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background-color: var(--main-title-color);
+        border: none;
+        cursor: pointer;
+    }
+    
+}
+
+@include size (tablet) {
+    
+    .contact__box{
+        padding-bottom: 96px;
+    }
+    .contact__title{
+        margin: 32px 0 24px 0   ;
+    }
+}
+
+@include size (desktop) {
+    .contact__box{
+        padding-bottom: 109px;
+    }
+    
+    .contact__first{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .contact__second{
+        display: flex;
+        margin-top: 48px;
+    }
+    
+    
+    .contact__title{
+        margin: 48px 0 24px 0   ;
+    }
+    
+    .contact__title--active{
+        margin: 0;
+    }
+    
+    .contact__desc-box{
+        max-width: 635px;
+    }
+    
+    .contact__desc{
+        margin-top: 48px;
+        font-size: 16px;
+    }
+    
+    .forum{
+        margin-bottom: 48px;
+    }
+    
+    .contact__form{
+        margin-left: auto;
+    }
+    
+    .contact__label{
+        min-width: 635px;
+    }
+}

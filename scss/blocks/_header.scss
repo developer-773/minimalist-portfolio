@@ -1,0 +1,113 @@
+@include size (phone) {
+    .header{
+        padding: 42px 0 49px 0;
+    }
+    
+    .header__left{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    
+    .sitenav{
+        position: fixed;
+        z-index: 11;
+        top: 89px;
+        right: 32px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 223px;
+        height: 186px;
+        padding: 40px 0 0;
+        background-color: var(--main-title-color);
+    }
+    
+    .sitenav-on .sitenav{
+        display: flex;
+    }
+    
+    .overflow{
+        overflow: hidden;
+    }
+    
+    .header__hamburger{
+        display: inline-block;
+        width: 24px;
+        height: 13px;
+        background-image: url("../images/toggle-open.svg");
+        background-color: transparent;
+        border: none;
+    }
+    
+    .sitenav-on .header__hamburger{
+        width: 18px;
+        height: 19px;
+        background-image: url("../images/toggle-close.svg");
+    }
+    
+    .sitenav__list{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .sitenav__item{
+        width: 100px;
+        margin-bottom: 32px;
+    }
+    
+    .sitenav__link{
+        @include txt-formats("Public Sans", 12px, 400, 14px, #fff)
+    }
+}
+
+@include size (tablet) {
+    
+    .header__wrap{
+        display: flex;
+        align-items: center;
+    }
+    
+    .sitenav{
+        position: static;
+        display: block;
+        flex-direction: row;
+        padding: 0;
+        width: auto;
+        height: auto;
+        background-color:#fff;
+    }
+    
+    .header__hamburger{
+        display: none;
+    }
+    
+    .header__navbar{
+        margin-left: auto;
+    }
+     
+    .sitenav__list{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .sitenav__item{
+        width: auto;
+        max-width: none;
+        margin-bottom: 0;
+    }
+    
+    .sitenav__item:not(:last-child){
+        margin-right: 42px;
+    }
+    
+    .sitenav__link{
+        @include txt-formats("Public Sans", 12px, 400, 14px, #33323D); 
+        
+    }
+    
+    .visit{
+        color: #5FB4A2;
+    }
+    
+}
